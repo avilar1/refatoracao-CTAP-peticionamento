@@ -1,0 +1,204 @@
+@import url(../base.css);
+
+
+.__card-corpo-titulo {
+    width: 938px;
+    display: grid;
+    
+    
+    grid-template-columns: 
+    calc(136px + 15px) /*nso*/
+    calc(26px - 15px)
+    calc(66px + 17px) /*dso*/
+    calc(26px - 15px)
+    calc(46px + 15px) /*srv*/
+    calc(198px + 15px + 15px)
+    calc(39px + 15px) /*org*/
+    57px
+    calc(70px + 15px) /*uta*/
+    calc(26px - 15px)
+    calc(53px + 15px) /*sit*/
+    calc(89px - 14px);
+    grid-template-rows: calc(70px - 30px);
+    grid-template-areas:
+        "nsoT . dsoT . srvT . orgT . utaT . sitT .";
+    align-items: flex-start;
+    background-color: var(--azul-turquesa-variante);
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    border-width: 1px;
+    color: var(--branco);
+    font-size: 13px;
+    font-family: museo700;
+    grid-column-gap: 0px;
+    justify-items: flex-start;
+    padding: 15px 14px; 
+    margin-bottom: 5px;
+}
+
+.card-body {
+    padding: 0px;
+}
+
+#cardT1 {
+    grid-area: nsoT;
+    width: 138px;
+}
+
+#cardT2 {
+    grid-area: dsoT;
+    width: 66px;
+    text-align: start;
+}
+
+#cardT3 {
+    grid-area: srvT;
+    justify-self: flex-start;
+}
+
+#cardT4 {
+    grid-area: orgT;
+    width: 39px;
+}
+
+#cardT5 {
+    grid-area: utaT;
+    width: 70px;
+    text-align: start;
+}
+
+#cardT6 {
+    grid-area: sitT;
+    width: 53px;
+}
+
+#cardT1::after,
+#cardT2::after,
+#cardT3::after,
+#cardT4::after,
+#cardT5::after,
+#cardT6::after {
+    background: url(../../img/caret-down-fill2.webp) no-repeat;
+    content: "";
+    display: inline-block;
+    flex-grow: 0;
+    height: 13px;
+    margin-left: 5px;
+    position: absolute;
+    top: 20px;
+    width: 13px;
+}
+
+#cardT5::after,
+#cardT2::after {
+    top: 40px;
+}
+
+#cardT1:hover::after,
+#cardT2:hover::after,
+#cardT3:hover::after,
+#cardT4:hover::after,
+#cardT5:hover::after,
+#cardT6:hover::after {
+    transition: .5s;
+    transform: rotate(-180deg);
+}
+
+
+#cardT1:not(:hover)::after,
+#cardT2:not(:hover)::after,
+#cardT3:not(:hover)::after,
+#cardT4:not(:hover)::after,
+#cardT5:not(:hover)::after,
+#cardT6:not(:hover)::after {
+    transition: .5s;
+
+}
+
+#cardT1.nselected::after,
+#cardT2.nselected::after,
+#cardT3.nselected::after,
+#cardT4.nselected::after,
+#cardT5.nselected::after,
+#cardT6.nselected::after {
+    content: none;
+}
+
+#cardT1.nselected:hover::after,
+#cardT2.nselected:hover::after,
+#cardT3.nselected:hover::after,
+#cardT4.nselected:hover::after,
+#cardT5.nselected:hover::after,
+#cardT6.nselected:hover::after,
+#cardT1.nrotate:hover::after,
+#cardT2.nrotate:hover::after,
+#cardT3.nrotate:hover::after,
+#cardT4.nrotate:hover::after,
+#cardT5.nrotate:hover::after,
+#cardT6.nrotate:hover::after{
+    content: "";
+    transform: rotate(-0deg);
+    transition: .5s;
+}
+
+#cardT1.nrotate::after,
+#cardT2.nrotate::after,
+#cardT3.nrotate::after,
+#cardT4.nrotate::after,
+#cardT5.nrotate::after,
+#cardT6.nrotate::after {
+    transform: rotate(-180deg);
+}
+
+
+@media (min-width: 780px) {
+
+    #cardTi1,
+    #cardTi2,
+    #cardTi3,
+    #cardTi4,
+    #cardTi5,
+    #cardTi6 {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+
+
+    .__card-corpo-titulo {
+        display: none;
+    }
+
+    #cardTi1,
+    #cardTi2,
+    #cardTi4,
+    #cardTi5 {
+        color: #7B7B7B;
+    }
+
+
+    #cardTi1 {
+        grid-area: nsoT;
+    }
+
+    #cardTi2 {
+        grid-area: dsoT;
+
+    }
+
+    #cardTi3,
+    #cardTi6 {
+        display: none;
+    }
+
+    #cardTi4 {
+        grid-area: orgT;
+    }
+
+    #cardTi5 {
+        grid-area: utaT;
+
+    }
+
+}

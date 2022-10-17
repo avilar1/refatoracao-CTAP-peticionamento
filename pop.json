@@ -1,0 +1,74 @@
+{
+    "detalhes":[
+    {"id": "1", 
+        "nso": "CID-REQ-2022/1211",
+        "dso": "17/12/2022",
+        "srv": "Instalação de caçamba",
+        "org": "COMLURB",
+        "uta": "30/12/2022",
+        "sit": "Em andamento"
+    },{"id": "2", 
+        "nso": "CID-REQ-2022/2874",
+        "dso": "22/5/2022",
+        "srv": "Remoção de entulho e bens inservíveis",
+        "org": "COMLURB",
+        "uta": "24/6/2022",
+        "sit": "Indeferida"
+    },{"id": "3",
+        "nso": "CID-REQ-2022/2452",
+        "dso": "20/5/2022",
+        "srv": "Denunciar obra irregular",
+        "org": "SECONSERVA",
+        "uta": "22/6/2022",
+        "sit": "Indeferida"
+    },{"id": "4",
+        "nso": "CID-REQ-2022/2014",
+        "dso": "07/5/2019",
+        "srv": "Autorização para colocação de mesas e cadeiras em área pública",
+        "org": "PGM",
+        "uta": "22/5/2022",
+        "sit": "Deferida parcialmente"
+    },{"id": "5",
+        "nso": "CID-REQ-0000/0000",
+        "dso": "14/5/2022",
+        "srv": "Limpeza de praças",
+        "org": "COMLURB",
+        "uta": "20/5/2022",
+        "sit": "Deferida"
+    },{"id": "6",
+        "nso": "CID-REQ-2022/1458",
+        "dso": "4/5/2022",
+        "srv": "Cópia de plantas de imóveis",
+        "org": "SMDEIS",
+        "uta": "17/5/2022",
+        "sit": "Cumprir Exigência"
+    },{"id": "7",
+        "nso": "CID-REQ-2022/1258",
+        "dso": "30/4/2022",
+        "srv": "Fiscalização de obras",
+        "org": "RIOURBE",
+        "uta": "16/5/2022",
+        "sit": "Indeferida"
+    },{"id": "8",
+        "nso": "CID-REQ-2022/1254",
+        "dso": "20/4/2022",
+        "srv": "Instalação de quebra - molas",
+        "org": "CET-RIO",
+        "uta": "10/5/2022",
+        "sit": "Indeferida"
+    },{"id": "9",
+        "nso": "CID-REQ-2022/1232",
+        "dso": "3/4/2022",
+        "srv": "Rever cálculo de IPTU",
+        "org": "SMFP",
+        "uta": "25/4/2022",
+        "sit": "Cumprir Exigência"
+      },{"id": "10",
+        "nso": "CID-REQ-2022/1234",
+        "dso": "10/4/2022",
+        "srv": "Reparo de buraco",
+        "org": "CET-RIO",
+        "uta": "20/4/2022",
+        "sit": "Deferida"
+      }
+]}

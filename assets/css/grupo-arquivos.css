@@ -1,0 +1,289 @@
+@import url(base.css);
+
+.__input-grupo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.__grupo-arquivo td, .__grupo-arquivo th {
+    padding: 15px 10px 0;
+}
+
+.__grupo-arquivo td .__input{
+    margin-top: 0px;
+    height: 30px;
+    
+}
+
+.__grupo-arquivo {
+    display: flex;
+    flex-direction: column;
+}
+
+.__grupo-arquivo tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    color: #212529;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.__grupo-arquivo tbody th,  
+.__grupo-arquivo thead td{
+    padding: 10px;
+}
+
+.__grupo-arquivo tbody tr, .__grupo-arquivo tfoot tr{
+    border-bottom: none;
+}
+
+.__grupo-arquivo thead tr {
+    border-bottom: solid 1px #cccccc;
+    padding-bottom: 14px;
+}
+
+.__grupo-arquivo tfoot {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.__arquivos {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.__grupo-arquivo td .__close-inline, .__close-line {
+    width: 19px;
+    height: 19px;
+    color: #000;
+     background: url(../img/x.png);
+     background-repeat: no-repeat;
+     border: 0;
+    border-radius: 0.25rem;
+}
+
+.__grupo-arquivo .__close-inline {
+    margin-left: 2px;
+}
+
+.__grupo-arquivo .__close-line {
+    display: none  ;
+}
+
+.__grupo-arquivo .__el-comum-arq {
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+
+    font-size: 15px;
+    line-height: 20px;
+    color: #212529;
+    align-self: center;
+    
+}
+
+.__grupo-arquivo table{
+border-radius: 4px  ;
+border-color: #cccccc  ;
+}
+
+.__grupo-arquivo input[type="file"] {
+    display: none;
+}
+
+.__grupo-arquivo .invalid-feedback {
+    white-space: nowrap;
+}
+
+.__btn-parent label {
+    font-family: museo300;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #C3C0C0;
+    text-align: start;
+    justify-content: center;
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+
+/*-------------------------inicio estilização do botão de inserir arquivos*/
+
+.__btn-parent .__button-file {
+    border-color: var(--verde-agua);
+}
+
+.__btn-parent td {
+    padding: 20px 36px 20px 0;
+}
+
+.__icon-file{
+    padding: 1px;
+}
+
+.__icon-file:hover path {
+    fill: #f5f5f5  ;
+}
+
+.__path-icon:hover {
+    fill: #f5f5f5  ;
+}
+
+.__button-file:hover {
+    background-color: #09B88A  ;
+    border-color: #09B88A  ;
+}
+
+.__button-file{
+    font-size: 0.8rem  ;  
+    border-color: var(--verde-agua) ;
+}
+
+.__icon-file:hover+.__el-button {
+    color: #f5f5f5  ;
+}
+
+.__el-button:hover {
+    color: #f5f5f5  ;
+}
+
+.__el-button:hover~.__path-icon {
+    fill: #f5f5f5  ;
+}
+
+.__el-button {
+    text-align: end;
+    color: var(--verde-agua);
+    height: 100%;
+    line-height: 20px  ;
+    font-size: 12px;
+    font-family: museo700, museo;
+    letter-spacing: -0.48px;
+    white-space: nowrap;
+}
+
+.__btn-parent {
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+}
+
+.__btn-parent div:nth-of-type(1) {
+
+    color: #B6BABE;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+.__btn-parent>.btn {
+    padding: 5px 11px 5px 6.5px  ;
+}
+
+.__el-button {
+    text-align: end ;
+}
+
+
+/*-------------------------fim estilização do botão de inserir arquivos*/
+
+@media screen and (max-width: 480px) {
+    .__row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+        background-color: var(--offwhite-fundo);
+        padding: 15px 4px;
+    }
+
+    .__btn-parent td {
+        padding: 20px 30px 20px 0;
+    }
+    
+
+    .__btn-parent div:nth-of-type(1) {
+        padding-bottom: 0px;
+    }
+    .__grupo-arquivo td, .__grupo-arquivo th {
+        padding: 0;
+    }
+
+    .__grupo-arquivo .card {
+        border: none;
+    }
+
+    .__grupo-arquivo tr {
+        border-bottom: none;
+    }
+
+    .__grupo-arquivo thead tr{
+        display: none;
+    }
+
+    .__grupo-arquivo tfoot {
+        margin-top: 15px;
+    }
+
+    .__grupo-arquivo tbody tr:first-child{
+        padding-top: 15px;
+        margin-top: 0px;
+    }
+
+    .__grupo-arquivo tfoot {
+        justify-content: flex-start;
+    }
+
+    .__grupo-arquivo .__el-comum-arq {
+        align-self: start;
+        margin-bottom: 5px;
+    }
+
+    .__grupo-arquivo .__close-line {
+        display: block  ;
+    }
+
+    .__btn-parent {
+        text-align: start;
+    }
+
+    .__input-grupo {
+        margin-left: 0px;
+    }
+
+    .__grupo-arquivo table{
+        border: none  ;
+    }
+
+    tbody {
+        padding: 0px  ;
+    }
+
+    .__grupo-arquivo tr {
+        display: flex;
+
+    }
+
+    .__close-inline {
+        display: none;
+    }
+
+    .__el-button {
+        text-align: start ;
+    }
+
+    .__grupo-arquivo tbody tr, .__grupo-arquivo tfoot tr{
+        border-radius: 4px;
+    }
+
+    .__grupo-arquivo input[type="text"i]::-webkit-input-placeholder{
+        color: #C3C0C0;
+        opacity: 1;
+    }
+    
+}

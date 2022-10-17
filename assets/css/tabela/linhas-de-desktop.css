@@ -1,0 +1,77 @@
+@import url(../base.css);
+
+.__card-corpo-desk {
+    width: 938px;
+    display: grid;
+    grid-template-columns:
+    calc(138px + 15px) /*nso*/
+    calc(26px - 15px)
+    calc(66px + 15px) /*dso*/
+    calc(26px - 15px)
+    calc(46px + 15px) /*srv*/
+    calc(198px + 15px + 15px)
+    calc(39px + 15px) /*org*/
+    57px
+    calc(70px + 15px) /*uta*/
+    calc(26px - 15px)
+    calc(53px + 15px) /*sit*/
+    calc(89px - 14px);
+    grid-template-rows: minmax(20px, 1fr);
+    grid-template-areas:
+        "nsoD . dsoD . srvD srvD orgD orgD utaD . sitD sitD";
+
+    align-items: flex-start;
+    background-color: var(--branco);
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    border-width: 1px;
+    font-size: 13px;
+    line-height: 20px;
+    grid-column-gap: 0px;
+    justify-items: flex-start;
+    padding: 15px 14px;
+}
+
+#cardI1-desk {
+    grid-area: nsoD; 
+}
+
+#cardI1-desk a {
+    color: #0D6EFD;
+    line-height: 20px;
+    height: 20px;
+}
+
+#cardI2-desk {
+    grid-area: dsoD;
+    justify-self: end;
+    margin-right: 15px;
+}
+
+#cardI3-desk {
+    grid-area: srvD;
+    justify-self: flex-start;
+}
+
+#cardI4-desk {
+    grid-area: orgD;
+}
+
+#cardI5-desk {
+    grid-area: utaD;
+    justify-self: end;
+    margin-right: 15px;
+}
+
+#cardI6-desk {
+    grid-area: sitD;
+    margin-top: -4.5px;
+    margin-bottom: -9.5px;
+    line-height: 20px;
+}
+
+@media (max-width: 780px)  {
+    tbody .__card-corpo-desk {
+        display: none;
+    }
+}

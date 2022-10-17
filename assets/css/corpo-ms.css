@@ -1,0 +1,288 @@
+@import url(base.css);
+
+body {
+    font-family: museo, Georgia, 'Times New Roman', Times, serif;
+
+}
+
+body main {
+    align-items: center;
+    background-color: var(--offwhite-fundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 100vw; */
+}
+
+body main div, body main label {
+    font-weight: 500;
+}
+
+.__container {
+    align-self: center;
+    background-color: var(--offwhite-fundo);
+    height: auto;
+    /* min-height: calc(100vmin - 300px); em produção, recomenda a utilização dessa linha*/
+    /* padding: 0 0 40px; */
+    padding: 0;
+    width: 938px;
+}
+
+main table {
+    max-width: 938px;
+    
+}
+
+thead.card,
+tbody.card {
+    align-items: center;
+    border: 0;
+}
+
+thead.card,
+tbody.card,
+table tbody .card,
+table tbody {
+    width: 938px;
+    min-width: 290px;
+    
+}
+
+tbody .accordion-body {
+    padding: 0;
+}
+
+tbody .accordion-item {
+    border: none;
+    
+}
+
+tbody a {
+    text-decoration: none;
+}
+
+tbody>tr,
+tbody>tr.card {
+    border: 1px;
+    background-clip: none;
+    margin-bottom: 5px;
+}
+
+
+
+tbody .btn {
+    padding-left: 10.666px;
+    padding-right: 10.666px;
+}
+
+tbody .btn-sm {
+    /* padding-top: 3.667px;
+    padding-bottom: 3.667px; */
+    padding: 3px 12px;
+}
+
+tbody .btn.btn-success {
+    background-color: #09b88a;
+    border-color: #09b88a;
+    border-radius: 3px;
+    /* height: 30px; */
+    line-height: 20px;
+    font-family: museo700;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 11px;
+    white-space: nowrap;
+    /* padding-left: 9.666px;
+    padding-right: 9.666px; */
+}
+
+tbody .btn-outline-success {
+    color: #09b88a;
+    border-color: #09b88a;
+    max-width: 107px;
+    width: calc(53px + 24px);
+    line-height: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+tbody .btn-outline-success.__btn-parcialmente{
+    padding: 3px 12px;
+    width: 103px;
+    text-align: start;
+}
+
+thead{
+    background-clip: none;
+    border: 1px;
+}
+
+thead tr th {
+    line-height: 20px;
+}
+
+td .accordion-button {
+    padding-left: 4px;
+    padding-bottom: 0px;
+}
+
+
+.__botao-sit {
+    border-radius: 13px;
+    font-size: 13px;
+    text-align: start;
+    font-weight: 500;
+    min-height: 26px;
+    line-height: 20px;
+}
+
+.__botao-sit-desk {
+    text-transform: uppercase;
+}
+
+.btn-outline-primary {
+    color: #4579FB;
+    border-color: #4579FB;
+}
+.btn-outline-primary:hover {
+    background-color:#4579FB;
+    border-color: #4579FB;
+}
+
+.btn-success:hover {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-outline-danger {
+    border-color: #F41717;
+    color: #F41717;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+
+
+@media (max-width: 992px) {
+    .__container {
+        margin: 0px 15px 0px 2px;
+        width: fit-content;
+    }
+}
+
+
+@media (max-width: 780px) {
+
+    html body,
+    table tbody div {
+        font-size: 15px;
+    }
+
+    .__container {
+       
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+
+        display: flex;
+        
+        box-shadow: none;
+        margin: 0px 15px 35px 15px;
+        
+        width: calc(100% - 30px);
+        width: -webkit-fill-available;
+        width: -moz-avaible;
+        width: fill-available;
+    }
+
+    table tbody {
+        width: 100%;
+    }
+
+    table tbody>tr.card {
+        /* border: 0px; */
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(204, 204, 204);
+    }
+
+    table thead.card {
+        border: 0;
+    }
+
+    table tbody>tr .accordion-item {
+        border: none;
+    }
+
+    .accordion-flush .accordion-item:first-child {
+        border-radius: 4px;
+    }
+
+
+    tbody .btn-outline-success {
+        max-width: none;
+        white-space: nowrap;
+        width: auto;
+        line-height: 20px;
+        font-size: 15px;
+    }
+
+    tbody .btn-outline-success.__btn-parcialmente {
+        width: auto;
+    }
+
+    tbody .accordion-body {
+        padding: 0px 4px 20px;
+    }
+
+
+
+    thead.card,
+    tbody.card,
+    table tbody .card {
+        width: 100%;
+    }
+
+    .collapse {
+        transition: background-color 0.25s;
+        /* background-color: var(--offwhite-fundo) ; */
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: var(--branco);
+        background-color: var(--azul-turquesa-variante);
+        padding-bottom: 15px;
+        
+    }
+
+    .__botao-sit-cumprir {
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    .__botao-sit-interno {
+        margin-left: -4px;
+        font-size: 15px;
+    }
+
+    main tbody .accordion-flush .accordion-item .accordion-button:not(.collapsed) {
+        font-weight: 700;
+    }
+
+    td .__extra-situacao {
+        display: block;
+        padding: 15px 4px;
+    }
+
+    td .__extra-situacao a {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    td .accordion-button {
+        padding-right: 4px;
+        
+    }
+}
+

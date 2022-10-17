@@ -1,0 +1,32 @@
+:root {
+    --branco: #fff;
+    --offwhite-fundo: #f5f5f5;
+    --azul-turquesa: #02b0d6;
+    --azul-turquesa-variante: #01b1d8;
+    --verde-agua: #09b88a;
+    --cinza-letra: #7b7b7b;
+    --cinza-claro-campo: #c3c0c0;
+}
+@font-face {
+    font-family: museo;
+    src: url(../fonts/MuseoSans_500.otf) format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: museo700;
+    src: url(../fonts/MuseoSans_700.otf) format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: museo300;
+    src: url(../fonts/MuseoSans-300.otf) format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Rawline;
+    src: url("../fonts/rawline-600.ttf") format("truetype");
+    font-display: swap;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Listagem das solicitações de peticionamento externo">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="http://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
+
+    <link href="assets-bs/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/corpo-ms.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/nav-e-filtro.css">
+    <link rel="stylesheet" href="assets/css/tabela/linhas-de-desktop.css">
+    <link rel="stylesheet" href="assets/css/tabela/linhas.css">
+    <link rel="stylesheet" href="assets/css/tabela/titulo.css">
+    
+
+    <title>Módulo de Peticionamento - Cidadão</title>
+</head>
+
+<body>
+      <header>
+       <div class="__cabecalho">
+          <div class="__cabecalho-conteudo ">
+              
+            <div class="__painel-logo">
+              <a href="https://carioca.rio"><p>Carioca Digital</p></a>     
+            </div>
+            
+            <div class="__painel-login">
+              <p>Olá, <span> João!</span> <span>Você está conectado(a)</span></p>
+              <details id="mostrar" class="__mostrar" open>
+                <summary><i></i></summary>
+                <div class="__informacoes">
+                  <div class="__informacoes-dados">
+                    <ul>
+                      <li><p>João Fernandes Almeida</p></li>
+                      <li><a href="">jfernandes10@gmail.com</a> </li>
+                    </ul>                        
+                  </div>
+                  <div class="__informacoes-logout">
+                    <button class="btn btn-outline-primary btn-sm __sair">Sair</button>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="__area-h1">
+            <h1>Minhas solicitações</h1>
+        </div>
+        <div class="__area-nav">
+          <nav>
+            <fieldset>
+              <div class="__check">
+                <input type="checkbox" name="arquivadas" id="checkaquirvadas">
+                <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
+              </div>
+              
+              <div class="dropdown" role="menu">
+                <a class="btn btn-secondary dropdown-toggle __dropdown-btn" id="selecione" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ordenar por
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                  <li><a class="dropdown-item " href="#" data-m="1" data-f="nso">Número da solicitação</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="2" data-f="dso">Data da solicitação</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="3" data-f="srv">Serviço</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="4" data-f="org">Órgão</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="5" data-f="uta">Última atualização</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="6" data-f="sit">Situação</a></li>
+                </ul>
+              </div>
+
+              
+            </fieldset>
+          
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+              <p>Últimos</p>
+              <div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="grupo um">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnTrinta" autocomplete="off" 
+                  data-filtro="trinta" data-valor=140>
+                  <label class="btn btn-outline-primary" for="btnTrinta">
+                    30 dias
+                  </label>
+                </div>
+      
+                <div class="btn-group btn-group-sm" role="group" aria-label="grupo dois">
+                  <input type="radio" class="btn-check " name="btnradio" id="btnSessenta" autocomplete="off"
+                    data-filtro="sessenta" data-valor=150>
+                  <label class="btn btn-outline-primary" for="btnSessenta">60 dias
+                  </label>
+                </div>
+      
+                <div class="btn-group btn-group-sm" role="group" aria-label="grupo tres">
+                  <input type="radio" class="btn-check " name="btnradio" id="btnNoventa" autocomplete="off"
+                    data-filtro="noventa" data-valor=160 checked>
+                  <label class="btn btn-outline-primary" for="btnNoventa">90 dias
+                    <button type="button" class="__close-inline" aria-label="Close" id="closebutton"></button>
+                  </label>
+                </div>
+      
+                <div class="btn-group btn-group-sm" role="group" aria-label="grupo tres">
+                  <input type="radio" class="btn-check " name="btnradio" id="btnCentoEVinte" autocomplete="off"
+                    data-filtro="centoevinte" data-valor=190>
+                  <label class="btn btn-outline-primary" for="btnCentoEVinte">120 dias
+                  </label>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+    
+    <noscript>
+        <p>Esse site precisa de uma linguagem de programação chamada "JavaScript" para funcionar corretamente no
+            seu navegador e esse não se encontra funcionando. <br> Caso tenha dificuldade de acessar essa tela e
+            veja essa mensagem, procure auxílio nos canais da prefeitura.</p>
+    </noscript>
+
+    <main>
+
+      <div class="__container" id="container">
+        <table id="container">
+          <thead class="card">
+            <tr class=" __card-corpo-titulo" data-corpo="linhacorpo">
+
+              <th id="cardT1" class="nselected" data-t="1">Número da solicitação</th>
+              <th id="cardT2" class="nselected" data-t="2">Data da solicitação</th>
+              <th id="cardT3" class="nselected" data-t="3">Serviço</th>
+              <th id="cardT4" class="nselected" data-t="4">Órgão</th>
+              <th id="cardT5" class="nselected" data-t="5">Última atualização</th>
+              <th id="cardT6" class="nselected" data-t="6">Situação</th>
+
+            </tr>
+          </thead>
+    <tbody id="modelo" data-tbody>
+      
+    </tbody>
+</table>
+        
+        
+      </div>
+
+      <footer>
+          <div>
+              <div class="__page-selected"> <a href="#">1</a></div>
+              <div class="__page-not-selected"> <a href="#">2</a></div>
+              <div id="proxima"> <a href="#">próxima</a> </div>
+          </div>
+      </footer>
+
+    </main>
+
+
+
+    <script src="js/ms/filtro.js" type="module"></script>
+    <!-- <script src="js/ms/pop.js"></script> -->
+    <!-- <script src="js/ms/newPop.js"></script> -->
+    <script src="js/ms/populador.js" type="module"></script>
+    <script src="js/ms/tabela.js" type="module"></script>
+    <script src="js/ms/dropdown.js" type="module"></script>
+    <script src="js/ms/acc.js" type="module"></script>
+    <script src="js/ms/filtrarDados.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

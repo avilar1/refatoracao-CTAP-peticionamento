@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    
+
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
+
+    <link href="assets-bs/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/comum.css">
+    <link rel="stylesheet" href="assets/css/corpo.css">
+    <link rel="stylesheet" href="assets/css/grupo-arquivos.css">
+    <link rel="stylesheet" href="assets/css/grupo-campos.css">
+    <link rel="stylesheet" href="assets/css/grupo-descricao.css">
+    <link rel="stylesheet" href="assets/css/grupo-documentos.css">
+    <link rel="stylesheet" href="assets/css/grupo-enviar.css">
+    <link rel="stylesheet" href="assets/css/grupo-identificacao.css">
+    <link rel="stylesheet" href="assets/css/grupo-representante-legal.css">
+    <link rel="stylesheet" href="assets/css/grupo-termo-de-uso.css">
+    
+    <title>Módulo de Peticionamento - Cidadão</title>
+</head>
+
+<body>
+    <header class="__container-cabecalho">
+        <div class="__cabecalho">
+            <div class="__cabecalho-conteudo ">
+                
+              <div class="__painel-logo">
+                <a href="https://carioca.rio"><p>Carioca Digital</p></a>     
+              </div>
+              
+              <div class="__painel-login">
+                <p>Olá, <span> João!</span> <span>Você está conectado(a)</span></p>
+                <details id="mostrar" class="__mostrar" open>
+                  <summary><i></i></summary>
+                  <div class="__informacoes">
+                    <div class="__informacoes-dados">
+                      <ul>
+                        <li><p>João Fernandes Almeida</p></li>
+                        <li><a href="">jfernandes10@gmail.com</a> </li>
+                      </ul>                        
+                    </div>
+                    <div class="__informacoes-logout">
+                      <button class="btn btn-outline-primary btn-sm __sair">Sair</button>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
+        <div class="__area-h1">
+            <h1>Rever cálculo de IPTU</h1>
+        </div>
+    </header>
+
+    <noscript>
+        <p>Esse site precisa de uma linguagem de programação chamada "JavaScript" para funcionar corretamente no
+            seu navegador e esse não se encontra funcionando. <br> Caso tenha dificuldade de acessar essa tela e
+            veja essa mensagem, procure auxílio nos canais da prefeitura.</p>
+    </noscript>
+
+    <main>
+
+        <div class="__container">
+
+            <form class="form needs-validation" action="" id="formInitial" novalidate>
+
+                <div class="__grupo invalido" style="display: none;">
+                    <span> Verifique os erros abaixo e envie novamente</span>
+                </div>
+
+                <dl class="__grupo" aria-label="grupo itens de identificação">
+                    <dt class="__label-comum">Nome Completo</dt>
+                    <dd class="__el-comum" id="nomeCompleto"> João Fernandes Almeida</dd>
+
+                    <dt class="__label-comum">CPF</dt>
+                    <dd class="__el-comum" id="CPFCompleto"> 123.456.789-00</dd>
+
+                    <dt class="__label-comum">Email</dt>
+                    <dd class="__el-comum" id="EmailCompleto"> joao.exemplo@email.com</dd>
+                </dl>
+
+
+                <div class="__grupo" aria-label="grupo representante legal">
+                    <!--acc-->
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed __acc-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne" data-accordion>
+                                    <div>
+                                    <input type="checkbox" name="" id="check-terceiros">
+                                    
+                                    <label for="check-terceiros" class="__el-esp">Solicitação feita por representante legal</label>
+                                    </div>
+                                </button>
+                            </h3>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <fieldset  >
+                                        <label for="nomeCompletoInteressado" class="form-label __label-comum">Nome
+                                            completo do representado</label>
+                                        <input type="text" class="form-control" id="nomeCompletoInteressado"
+                                            placeholder="Nome e Sobrenome">
+                                        <div class="invalid-feedback">
+                                            Formato inválido
+                                        </div>
+                                    </fieldset>
+                                    <fieldset  >
+                                        <label for="cpfInteressado" class="form-label __label-comum">CPF do
+                                            representado</label>
+                                        <input type="text" class="form-control __input-comum" id="cpfInteressado"
+                                            placeholder="123.456.789-00">
+                                        <div class="invalid-feedback">
+                                            Formato inválido
+                                        </div>
+                                    </fieldset>
+
+                                    <p class="__el-comum" id="aviso"> Ao anexar documentos, é obrigatório incluir a procuração ou documento comprobatório da condição de representante legal.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="__grupo __grupo-camp" aria-label="grupo campos de preechimento do formulário">
+
+                    <h2 class="__label-comum ">Endereço da Solicitação</h2>
+                    <fieldset id="Especifico-cep" >
+                        
+                            <label for="cep" class="__label-comum">CEP</label>
+                            <input type="text" class="form-control __input-comum-esp __input" id="cep"
+                                placeholder="00000-000" data-end="cep" size="10" maxlength="9"
+                                onblur="pesquisacep(this.value);">
+                            <div class="invalid-feedback">
+                                Formato inválido
+                            </div>
+                        
+                    </fieldset>
+
+                    <fieldset>
+                        <div class=" __col-autor-l">
+                            <label for="inputEnd" class="__label-comum">Endereço*</label>
+                            <input type="text" class="form-control __input" id="inputEnd"
+                                placeholder="Avenida, Rua, Praça..." data-end="end" required>
+                            
+                                <div class="invalid-feedback">
+                                Formato inválido
+                            
+                            </div>
+                        </div>
+                                       
+                        <div class="__col-autor-r">
+                            <label for="inputnum" class="__label-comum ">Número*</label>
+                            <input type="number" class="form-control " id="inputnum" data-end="num" required>
+                            <div class="invalid-feedback">
+                                Formato inválido
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class=" __col-autor-l">
+                            <label for="inputComplemento" class="__label-comum ">Complemento</label>
+                            <input type="text" class="form-control __input" id="inputComplemento"
+                                data-end="cop" placeholder="Apartamento, Casa...">
+                            <div class="invalid-feedback">
+                                Formato inválido
+                            </div>
+                        </div>
+                                        
+                        <div class="__col-autor-r">
+                            <label for="inputBairro" class="__label-comum">Bairro</label>
+                            <input type="text" class="form-control __input" id="inputBairro" data-end="bar">
+                            <div class="invalid-feedback">
+                                Formato inválido
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="Especifico-cid">
+                        <div class="__col-autor-l">
+                            <label for="inputCidade" class="__label-comum">Cidade*</label>
+                            <input type="text" class="form-control __input" id="inputCidade" data-end="cid"
+                                required>
+                            <div class="invalid-feedback">
+                                Formato inválido
+                            </div>
+                        </div>
+                    
+                        <fieldset class="__col-autor-r" id="FSestado">
+                            <label for="inputEstado" class="__label-comum" >Estado*</label>
+                            <select id="inputEstado" class="form-control custom-select " data-end="uff" required>
+                                <option value="" disabled selected hidden>Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                                <!-- <option value="EX">Estrangeiro</option> -->
+                            </select>
+                            <div class="invalid-feedback">
+                                Selecione uma opção
+                            </div>
+                            </fildset>
+                        </fieldset>
+                </div>
+
+                <div class="__grupo __grupo-docs" aria-label="grupo documentos necessários">
+                    <h2 class="__label-comum  ">Documentos Necessários</h2>
+
+                    <ul>
+                        <li>Calendário completo de pagamento do IPTU 2022</li>
+                        <li>Informações sobre Taxa de Coleta Domiciliar de Lixo (TCL) </li>
+                        <li>Cálculo do IPTU em atraso</li>
+                        <li>Informativo Valor Venal 2022</li>
+                    </ul>
+
+                </div>
+
+                <div class="__grupo __grupo-desc" aria-label="grupo descricao">
+                    <label for="inputDescricao" class=" __label-comum ">Descrição*</label>
+                    <textarea class="form-control" rows="6" id="inputDescricao"
+                        placeholder="Apresente aqui sua Solicitação" required></textarea>
+                    <div class="invalid-feedback">
+                        Preencha esse campo
+                    </div>
+                </div>
+
+                <div class="__grupo __grupo-arquivo" aria-label="grupo arquivos">
+
+                    <h2 class="__label-comum">Anexar Documentos</h2>
+                    <table border="1" class="card">
+
+                        <thead>
+                            <tr>
+                                <th class="__el-comum-arq"> Arquivo </th>
+                                <th class="__el-comum-arq"> Descrição </th>
+                            </tr>
+                        </thead>
+
+                        <tbody data-file="row">
+
+                         <!--        essa precisa ser excluida, meramente ilustrativo  v      -->   
+
+                            <tr class="__row">
+                                <td class="__row-descricao">
+                                    <span class="__el-comum-arq">exemplo2.pdf</span>
+                                    <button type="button" class="__close-line" aria-label="Close"></button>
+                                        
+                                </td>
+                                <td class="__input-grupo">
+
+                                    <input type="text" class="form-control __input"
+                                        id="file-item-descricao" value="" placeholder="descreva o documento">
+                                        <button type="button" class="__close-inline" aria-label="Close"
+                                        data-file="closeB" onclick="remove(this.parentElement.parentElement)"></button>
+                                </td>
+                            </tr>
+                            <tr class="__row">
+                                <td class="__row-descricao">
+                                    <span class="__el-comum-arq">exemplo1.pdf</span>
+                                    <button type="button" class="__close-line" aria-label="Close"></button>
+                                </td>
+                                <td class="__input-grupo">
+                                    <input type="text" class="form-control  __input"
+                                        id="file-item-descricao" value="" placeholder="descreva o documento">
+                                    <button type="button" class="__close-inline" aria-label="Close"
+                                        data-file="closeB" onclick="remove(this.parentElement.parentElement)"></button>
+                                </td>
+                            </tr>
+                           <!--        essa precisa ser excluida, meramente ilustrativo  ^      -->
+
+
+                        </tbody>
+
+                        <tfoot class="input-grupo">
+                            <tr class="__btn-parent">
+                                <td></td>
+                                <td>
+                                    
+                                    <label class="btn btn-outline-success btn-file __button-file" id="labelbotom"
+                                        for="arquivo">
+                                        <svg width="19" height="20" viewBox="0 0 19 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="__icon-file">
+                                            <path
+                                                d="M5.34375 3.5625C5.34375 2.77514 5.65653 2.02003 6.21328 1.46328C6.77003 0.906528 7.52514 0.59375 8.3125 0.59375C9.09986 0.59375 9.85497 0.906528 10.4117 1.46328C10.9685 2.02003 11.2812 2.77514 11.2812 3.5625V14.25C11.2812 14.7224 11.0936 15.1755 10.7595 15.5095C10.4255 15.8436 9.97242 16.0312 9.5 16.0312C9.02758 16.0312 8.57452 15.8436 8.24047 15.5095C7.90642 15.1755 7.71875 14.7224 7.71875 14.25V5.9375C7.71875 5.78003 7.78131 5.629 7.89266 5.51766C8.00401 5.40631 8.15503 5.34375 8.3125 5.34375C8.46997 5.34375 8.62099 5.40631 8.73234 5.51766C8.84369 5.629 8.90625 5.78003 8.90625 5.9375V14.25C8.90625 14.4075 8.96881 14.5585 9.08016 14.6698C9.19151 14.7812 9.34253 14.8438 9.5 14.8438C9.65747 14.8438 9.8085 14.7812 9.91985 14.6698C10.0312 14.5585 10.0938 14.4075 10.0938 14.25V3.5625C10.0938 3.32858 10.0477 3.09696 9.95816 2.88085C9.86864 2.66473 9.73744 2.46837 9.57203 2.30297C9.40663 2.13756 9.21027 2.00636 8.99415 1.91684C8.77804 1.82732 8.54642 1.78125 8.3125 1.78125C8.07858 1.78125 7.84696 1.82732 7.63085 1.91684C7.41473 2.00636 7.21837 2.13756 7.05297 2.30297C6.88756 2.46837 6.75636 2.66473 6.66684 2.88085C6.57732 3.09696 6.53125 3.32858 6.53125 3.5625V14.25C6.53125 15.0374 6.84403 15.7925 7.40078 16.3492C7.95753 16.906 8.71264 17.2188 9.5 17.2188C10.2874 17.2188 11.0425 16.906 11.5992 16.3492C12.156 15.7925 12.4688 15.0374 12.4688 14.25V5.9375C12.4688 5.78003 12.5313 5.629 12.6427 5.51766C12.754 5.40631 12.905 5.34375 13.0625 5.34375C13.22 5.34375 13.371 5.40631 13.4823 5.51766C13.5937 5.629 13.6562 5.78003 13.6562 5.9375V14.25C13.6562 15.3523 13.2184 16.4095 12.4389 17.1889C11.6595 17.9684 10.6023 18.4062 9.5 18.4062C8.39769 18.4062 7.34054 17.9684 6.56109 17.1889C5.78164 16.4095 5.34375 15.3523 5.34375 14.25V3.5625Z"
+                                                fill="#09B88A" class="__path-icon" id="pathfile" />
+                                        </svg>
+                                        <span class="__el-button" id="spanfile">SELECIONE O ARQUIVO</span></label>
+                                    <input type="file" name="arquivo" id="arquivo" data-file="bfile" multiple
+                                        accept=".pdf, .txt" required>
+                                    <div for="customFileInput">(Somente pdf, máximo 10MB)</div>
+                                    <div class="invalid-feedback">
+                                        Selecione os arquivos necessários
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+
+                <div class="__grupo __termoDeUso" aria-label="grupo termo de uso">
+                    
+                    <input type="checkbox" name="termo" id="input-termo" required>
+                    <label for="input-termo" class="__el-esp form-check-label" id="label-input-termo">Declaro que li e concordo com os <a href="#">termos de uso</a></label>
+                    <div class="invalid-feedback">
+                        Campo obrigatório
+                    </div>
+                
+                
+                </div>
+               
+                <div class="__grupo" aria-label="grupo final para enviar ou cancelar">
+
+                    <div>
+                        <label for="nomeCompleto" class="__label-comum">*Campos obrigatórios</label>
+                    </div>
+
+                    <div class="__grupo-end">
+                        <button type="submit" class="btn btn-success __button-submit">ENVIAR</button>
+                        <button type="reset" href="#" class="btn __button-cancel" >CANCELAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </main>
+
+
+    <!-- Atente-se para a ordem: primeiro jquery, depois locastyle, depois o JS do Bootstrap. -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <!--tentar transformar isso em módulos de app-->
+    <script src="js/compartilhado/main.js"></script>
+    <script src="js/compartilhado/fileButton.js"></script>
+    <script src="js/compartilhado/fileItem.js"></script>
+    <script src="js/form/accordion.js"></script>
+    <script src="js/form/terceiros.js"></script>
+    <script src="js/form/viaCEP.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+@import url(base.css);
+
+ .accordion-button{
+    padding: 0;
+    /* width: calc(100% - 20px); */
+}
+
+.accordion-button div {
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--branco)  ;
+}
+
+.accordion-button > input[type="checkbox" i] {
+    align-self: flex-start;
+}
+
+.accordion-button::after {
+    display: none  ;
+}
+
+h3 .accordion-button:not(.collapsed){
+    background: none;
+}
+
+h3 .accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 10px  ;
+    border: solid #cccccc;
+    border-width: 0 1px 1px;
+    /* margin-top: 5.2px; */
+}
+.accordion-body fieldset {
+    margin-bottom: 20px;
+}
+
+.show .accordion-body{
+    padding: 20px 10px;
+}
+
+.accordion-header {
+    border-bottom: solid 1px #cccccc;
+    border: solid 1px #cccccc;
+}
+
+.accordion-header:focus {
+    border: solid 0.1px #cccccc  ;
+}
+
+.accordion-item {
+    border: none  ;
+}
+
+.accordion-item .__el-esp{
+    padding: 13px 0 13px 0.75em;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #212529;
+}
+
+.accordion-flush .accordion-item .accordion-button {
+    padding: 0 10px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .__acc-button {
+        border-top: none;
+    }
+
+
+    .accordion {
+        border: none;
+    }
+
+    .accordion-header {
+        border: none;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .accordion-body {
+        background-color: var(--offwhite-fundo);
+        border: none;
+    }
+
+    .accordion-item .__el-esp {
+        padding: 0px 0px 0px 0.75em;
+    }
+
+    .accordion-button{
+        padding: 0px;
+        
+    }
+
+    .accordion-flush .accordion-item .accordion-button {
+        padding: 0;
+    }
+
+    .accordion-flush .accordion-collapse {
+        margin-top: 3px;
+    }
+    
+}

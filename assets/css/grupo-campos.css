@@ -1,0 +1,145 @@
+@import url(base.css);
+
+.__grupo-camp {
+    display: flex;
+    flex-direction: column;
+}
+
+.__grupo-camp > fieldset {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.__input::-webkit-input-placeholder{
+    font-weight: 500 ;
+    color: #B6BABE;
+    margin-top: 5px ;
+    text-align: start;
+    justify-content: center;
+    padding-bottom: 5px ;
+}
+
+#Especifico-cid{
+    align-self: flex-start;
+}
+
+#Especifico-cep{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+.__row-descricao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+select.form-control {
+    -webkit-appearance: menulist;
+}
+
+.form-control .__input{
+    padding: 4px;
+    margin-top: 5px;   
+}
+
+/*----inicio lista de inputs ----*/
+#inputEnd {
+    width: 451px;
+}
+
+#inputComplemento, #inputCidade{
+    width: 289px;
+}
+
+#inputBairro{
+    width: 288px;
+}
+
+#inputnum {
+    margin-top: 5px;
+    width: 126px;
+}
+
+#FSestado{
+    margin-left: 36px;
+}
+
+#inputEstado {
+    margin-top: 5px;
+    font-size: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 213px;
+}
+/*---- fim lista de inputs ----*/
+
+
+
+@media screen and (max-width: 480px) {
+    .__grupo-camp > fieldset {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .__grupo-camp label {
+        margin-top: 20px;
+    }
+
+    .__grupo-camp h2 {
+        margin-bottom: 0px;
+    }
+
+    #FSestado label {
+        margin-top: 20px;
+    }
+
+    .__input {
+        width: calc(100vw - 36px);
+    }
+
+    #FSestado{
+        margin-left: 0px;
+    }
+
+    #inputEnd, #inputComplemento, #inputBairro {
+        width: 100%;
+    }
+
+    #inputnum {
+        width: 126px;
+        padding: 4px;
+    }
+
+    #cep {
+        
+        padding: 4px;
+    }
+
+    #inputEstado {
+        width: 213px;
+        padding: 4px;
+        margin-left: 0px;
+    }
+
+
+}
+
+/*essas classe acerta as margens esquerda e direita dos formulários de dois itens. Outras soluções são bem vindas.*/
+
+
+@media (max-width: 992px) {
+    .__grupo-camp fieldset .__col-autor-l {
+        padding-right: 0px;
+
+    }
+
+    .__grupo-camp fieldset .__col-autor-r {
+        padding-left: 0px;
+    }
+}
+
+/*fim classes responsivas de duas colunas*/
