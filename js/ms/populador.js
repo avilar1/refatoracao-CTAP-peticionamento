@@ -19,7 +19,7 @@ window.endPoint = end;
 const corpo = document.querySelector('#container');
 const tbody = document.querySelector('[data-tbody]');
 
-exibirInfo(end);
+exibirInfo(end); 
 
 //método usando fetch, quando dado é externo. a variável end é o endpoint da API, só mudar ali
 // getBuscar();
@@ -65,7 +65,7 @@ function exibirInfo(informacoes) {
        
       </tr>
 
-        <tr class="card " data-linha>
+        <tr class="" data-linha>
                     <td class="accordion accordion-flush" id="" data-acc="aflush">
                       
                      <div class="accordion-item" id="accordionitem" data-acc="aitem">

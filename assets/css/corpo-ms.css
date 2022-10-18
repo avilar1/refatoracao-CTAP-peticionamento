@@ -28,10 +28,7 @@ body main div, body main label {
     width: 938px;
 }
 
-main table {
-    max-width: 938px;
-    
-}
+
 
 thead.card,
 tbody.card {
