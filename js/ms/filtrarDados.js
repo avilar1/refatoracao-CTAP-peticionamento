@@ -25,7 +25,7 @@ end.forEach(element => {
     var ndateParts = ndata.split("/");
 
     var ndateObject = new Date(+ndateParts[2], ndateParts[1] - 1, +ndateParts[0]);
-    console.log(ndateObject)
+    
 
     let nuta = element.dso
     let partes = nuta.split("/");
@@ -48,7 +48,7 @@ function diferencaData() {
 
         ordenadasDatas.push(Math.floor((date - e) / (24 * 3600 * 1000)));
     });
-    console.log(ordenadasDatas)
+    
     return ordenadasDatas;
     
 }
@@ -63,7 +63,7 @@ function ordenarPorUltimaAtualizacao(objeto) {
 
 let ordenado = ordenarPorUltimaAtualizacao(end);
 
-console.log(ordenado);
+
 exibirInfo(ordenado);
 correcaoDasTags();
 janela();

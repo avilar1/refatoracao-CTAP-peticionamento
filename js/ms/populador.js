@@ -18,6 +18,7 @@ window.endPoint = end;
 
 const corpo = document.querySelector('#container');
 const tbody = document.querySelector('[data-tbody]');
+let ncont = 0;
 
 exibirInfo(end); 
 
@@ -55,7 +56,7 @@ function exibirInfo(informacoes) {
     };
 
     output += `
-        <tr class="__card-corpo-desk" id="cardbody-desk" data-desk="row">
+        <tr class="__card-corpo-desk" id="" data-desk="row">
         <td id="cardI1-desk" data-desk="nso"><a href="#" data-desk="nsoD">${informacao.nso}</a></td>
         <td id="cardI2-desk" data-desk="dso">${formatDate(new Date(informacao.dso))}</td>
         <td id="cardI3-desk" data-desk="srv">${informacao.srv}</td>
@@ -98,7 +99,12 @@ function exibirInfo(informacoes) {
   });
 
   tbody.innerHTML = output;
-
+  // if(ncont == 0){
+  correcaoDasTags(informacoes.length);
+  // }
+  
+ncont++;
+window.ncont = ncont;
   /**ATENÇÃO: essas três funções NÃO SÃO IGUAIS!! */
   function situacaoDesk(informacao) {
     return (informacao.sit == "Indeferida") ? (`class= "btn btn-outline-danger btn-sm __botao-sit" style="pointer-events: none" disabled`) :
@@ -132,21 +138,21 @@ function exibirInfo(informacoes) {
 
               console.log("nenhum Mesmo!");
   }
+  
 }
 
-function correcaoDasTags() {
+function correcaoDasTags(end) {
 
-
-
-  let e = pop.detalhes;
-
+  console.log(end)
+//   const e = pop.detalhes;
+// window.e = e;
   let rowDesk = document.querySelectorAll('[data-desk="row"]');
   let ahonePOP = document.querySelectorAll('[data-acc="ahone"]');
   let abuttonPOP = document.querySelectorAll('[data-acc="abutton"]');
   let aconePOP = document.querySelectorAll('[data-acc="acone"]');
   let asit = document.querySelectorAll('[data-acc="asit"]');
 
-  for (let i = 0; i < e.length; i++) {
+  for (let i = 0; i < end; i++) {
 
     rowDesk[i].id = "cardbody-desk" + i;
 
@@ -165,7 +171,7 @@ function correcaoDasTags() {
 
 }
 
-correcaoDasTags();
+// correcaoDasTags();
 
 function janela() {
 
@@ -201,11 +207,13 @@ function myFunction(x) {
         n++
 
         document.querySelector("#mostrar").open = false;
+        
 
       })
       controle = 0;
     }
   }
+
 }
 
 var x = window.matchMedia("(min-width: 780px)")
@@ -215,3 +223,4 @@ x.addListener(myFunction) // Attach listener function on state changes
 }
 
 janela();
+correcaoDasTags()

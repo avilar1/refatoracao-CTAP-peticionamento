@@ -1,3 +1,4 @@
+@import url(../base.css);
 
 main table {
     display: table;
@@ -72,7 +73,7 @@ tbody tr {
     border-width: 1px;
     color: var(--cinza-escuro);
     font-size: 13px;
-    font-family: museo700;
+    font-family: museo;
     justify-items: flex-start;
     padding: 15px 14px; 
     margin-bottom: 5px;
@@ -82,7 +83,7 @@ tbody tr {
 .__card-corpo-desk {
     width: 938px;
     display: table-row;
-        align-items: flex-start;
+    align-items: flex-start;
     background-color: var(--branco);
     border: 1px solid #cccccc;
     border-radius: 4px;
@@ -91,6 +92,106 @@ tbody tr {
     line-height: 20px;
     justify-items: flex-start;
     padding: 15px 14px;
+}
+
+#cardI1-desk {
+    white-space: nowrap;
+}
+
+#cardT1 {
+    min-width: calc(180px - 14px);
+}
+
+#cardI6-desk,
+#cardT6 {
+    align-self: flex-end;
+    padding-left: 18px;
+}
+
+#cardT5 {
+    width: 1px;
+    /* white-space: nowrap; */
+    /* word-break: break-all; */
+}
+
+#cardI5-desk {
+    text-align: end; 
+}
+
+/*título*/
+
+
+#cardT1::after,
+#cardT2::after,
+#cardT3::after,
+#cardT4::after,
+#cardT5::after,
+#cardT6::after {
+    background: url(../../img/caret-down-fill2.webp) no-repeat;
+    content: "";
+    display: inline-block;
+    flex-grow: 0;
+    height: 13px;
+    margin-left: 5px;
+    position: absolute;
+    /* top: 20px; */
+    width: 13px;
+}
+
+#cardT1:hover::after,
+#cardT2:hover::after,
+#cardT3:hover::after,
+#cardT4:hover::after,
+#cardT5:hover::after,
+#cardT6:hover::after {
+    transition: .5s;
+    transform: rotate(-180deg);
+}
+
+
+#cardT1:not(:hover)::after,
+#cardT2:not(:hover)::after,
+#cardT3:not(:hover)::after,
+#cardT4:not(:hover)::after,
+#cardT5:not(:hover)::after,
+#cardT6:not(:hover)::after {
+    transition: .5s;
+
+}
+
+#cardT1.nselected::after,
+#cardT2.nselected::after,
+#cardT3.nselected::after,
+#cardT4.nselected::after,
+#cardT5.nselected::after,
+#cardT6.nselected::after {
+    content: none;
+}
+
+#cardT1.nselected:hover::after,
+#cardT2.nselected:hover::after,
+#cardT3.nselected:hover::after,
+#cardT4.nselected:hover::after,
+#cardT5.nselected:hover::after,
+#cardT6.nselected:hover::after,
+#cardT1.nrotate:hover::after,
+#cardT2.nrotate:hover::after,
+#cardT3.nrotate:hover::after,
+#cardT4.nrotate:hover::after,
+#cardT5.nrotate:hover::after,
+#cardT6.nrotate:hover::after{
+    content: "";
+    transform: rotate(-0deg);
+    transition: .5s;
+}
+
+#cardT1.nrotate::after,
+#cardT2.nrotate::after,
+#cardT3.nrotate::after,
+#cardT4.nrotate::after,
+#cardT5.nrotate::after,
+#cardT6.nrotate::after {
+    transform: rotate(-180deg);
 }
 
 
