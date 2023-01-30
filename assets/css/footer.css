@@ -59,7 +59,8 @@ footer > div {
   line-height: 20px;
 }
 
-#proxima {
+footer > div > div:last-child {
+
   align-items: center;
   background-color: var(--offwhite-fundo);
   border-radius: 50%;
@@ -72,9 +73,16 @@ footer > div {
   margin-left: 10px;
 }
 
-#proxima a {
+/* #proxima {
+} */
+
+footer > div > div:last-child a {
+
   color: #4579fb;
 }
+
+/* #proxima a {
+} */
 
 @media (max-width: 780px) {
 

@@ -96,7 +96,6 @@ input[type="checkbox"i] {
 fieldset .form-control,
 td .__input {
     border-color: #ccc;
-    color: #C3C0C0;
     font-size: 15px;
     font-style: normal;
     line-height: 20px;
@@ -115,6 +114,13 @@ fieldset .form-control::placeholder {
 .__container .btn {
     border-radius: 3px;
     font-weight: 700;
+}
+
+
+.form-control.is-valid, .was-validated .form-control:valid {
+    border-color: #198754;
+    padding-right: inherit;
+    background-image: none;
 }
 
 @media screen and (max-width: 480px) {

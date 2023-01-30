@@ -40,6 +40,39 @@
     padding: 0px;
 }
 
+.__card-corpo-titulo th:nth-child(1) {
+    grid-area: nsoT;
+    width: 138px;
+}
+
+.__card-corpo-titulo th:nth-child(2) {
+    grid-area: dsoT;
+    width: 66px;
+    text-align: start;
+}
+
+.__card-corpo-titulo th:nth-child(3) {
+    grid-area: srvT;
+    justify-self: flex-start;
+}
+
+.__card-corpo-titulo th:nth-child(4) {
+    grid-area: orgT;
+    width: 39px;
+}
+
+.__card-corpo-titulo th:nth-child(5) {
+    grid-area: utaT;
+    width: 70px;
+    text-align: start;
+}
+
+.__card-corpo-titulo th:nth-child(6) {
+    grid-area: sitT;
+    width: 53px;
+}
+
+/* 
 #cardT1 {
     grid-area: nsoT;
     width: 138px;
@@ -70,14 +103,19 @@
 #cardT6 {
     grid-area: sitT;
     width: 53px;
-}
+} */
 
-#cardT1::after,
-#cardT2::after,
-#cardT3::after,
-#cardT4::after,
-#cardT5::after,
-#cardT6::after {
+
+
+/* .__card-corpo-titulo th:nth-child(1)::after,
+.__card-corpo-titulo th:nth-child(2)::after,
+.__card-corpo-titulo th:nth-child(3)::after,
+.__card-corpo-titulo th:nth-child(4)::after,
+.__card-corpo-titulo th:nth-child(5)::after,
+.__card-corpo-titulo th:nth-child(6)::after  */
+
+.__card-corpo-titulo th::after
+{
     background: url(../../img/caret-down-fill2.webp) no-repeat;
     content: "";
     display: inline-block;
@@ -89,78 +127,96 @@
     width: 13px;
 }
 
-#cardT5::after,
-#cardT2::after {
+.__card-corpo-titulo th:nth-child(5)::after,
+.__card-corpo-titulo th:nth-child(2)::after {
     top: 40px;
 }
 
-#cardT1:hover::after,
-#cardT2:hover::after,
-#cardT3:hover::after,
-#cardT4:hover::after,
-#cardT5:hover::after,
-#cardT6:hover::after {
+/* .__card-corpo-titulo th:nth-child(1):hover::after,
+.__card-corpo-titulo th:nth-child(2):hover::after,
+.__card-corpo-titulo th:nth-child(3):hover::after,
+.__card-corpo-titulo th:nth-child(4):hover::after,
+.__card-corpo-titulo th:nth-child(5):hover::after,
+.__card-corpo-titulo th:nth-child(6):hover::after  */
+
+.__card-corpo-titulo th:hover::after{
     transition: .5s;
     transform: rotate(-180deg);
 }
 
 
-#cardT1:not(:hover)::after,
-#cardT2:not(:hover)::after,
-#cardT3:not(:hover)::after,
-#cardT4:not(:hover)::after,
-#cardT5:not(:hover)::after,
-#cardT6:not(:hover)::after {
+/* .__card-corpo-titulo th:nth-child(1):not(:hover)::after,
+.__card-corpo-titulo th:nth-child(2):not(:hover)::after,
+.__card-corpo-titulo th:nth-child(3):not(:hover)::after,
+.__card-corpo-titulo th:nth-child(4):not(:hover)::after,
+.__card-corpo-titulo th:nth-child(5):not(:hover)::after,
+.__card-corpo-titulo th:nth-child(6):not(:hover)::after  */
+
+.__card-corpo-titulo th:not(:hover)::after
+{
     transition: .5s;
 
 }
 
-#cardT1.nselected::after,
-#cardT2.nselected::after,
-#cardT3.nselected::after,
-#cardT4.nselected::after,
-#cardT5.nselected::after,
-#cardT6.nselected::after {
+/* .__card-corpo-titulo th:nth-child(1).nselected::after,
+.__card-corpo-titulo th:nth-child(2).nselected::after,
+.__card-corpo-titulo th:nth-child(3).nselected::after,
+.__card-corpo-titulo th:nth-child(4).nselected::after,
+.__card-corpo-titulo th:nth-child(5).nselected::after,
+.__card-corpo-titulo th:nth-child(6).nselected::after  */
+
+.__card-corpo-titulo th.nselected::after {
     content: none;
 }
 
-#cardT1.nselected:hover::after,
-#cardT2.nselected:hover::after,
-#cardT3.nselected:hover::after,
-#cardT4.nselected:hover::after,
-#cardT5.nselected:hover::after,
-#cardT6.nselected:hover::after,
-#cardT1.nrotate:hover::after,
-#cardT2.nrotate:hover::after,
-#cardT3.nrotate:hover::after,
-#cardT4.nrotate:hover::after,
-#cardT5.nrotate:hover::after,
-#cardT6.nrotate:hover::after{
+/* .__card-corpo-titulo th:nth-child(1).nselected:hover::after,
+.__card-corpo-titulo th:nth-child(2).nselected:hover::after,
+.__card-corpo-titulo th:nth-child(3).nselected:hover::after,
+.__card-corpo-titulo th:nth-child(4).nselected:hover::after,
+.__card-corpo-titulo th:nth-child(5).nselected:hover::after,
+.__card-corpo-titulo th:nth-child(6).nselected:hover::after,
+.__card-corpo-titulo th:nth-child(1).nrotate:hover::after,
+.__card-corpo-titulo th:nth-child(2).nrotate:hover::after,
+.__card-corpo-titulo th:nth-child(3).nrotate:hover::after,
+.__card-corpo-titulo th:nth-child(4).nrotate:hover::after,
+.__card-corpo-titulo th:nth-child(5).nrotate:hover::after,
+.__card-corpo-titulo th:nth-child(6).nrotate:hover::after */
+
+
+.__card-corpo-titulo th.nselected:hover::after,
+.__card-corpo-titulo th.nrotate:hover::after{
     content: "";
     transform: rotate(-0deg);
     transition: .5s;
 }
 
-#cardT1.nrotate::after,
-#cardT2.nrotate::after,
-#cardT3.nrotate::after,
-#cardT4.nrotate::after,
-#cardT5.nrotate::after,
-#cardT6.nrotate::after {
+/* .__card-corpo-titulo th:nth-child(1).nrotate::after,
+.__card-corpo-titulo th:nth-child(2).nrotate::after,
+.__card-corpo-titulo th:nth-child(3).nrotate::after,
+.__card-corpo-titulo th:nth-child(4).nrotate::after,
+.__card-corpo-titulo th:nth-child(5).nrotate::after,
+.__card-corpo-titulo th:nth-child(6).nrotate::after  */
+
+.__card-corpo-titulo th.nrotate::after{
     transform: rotate(-180deg);
 }
 
 
 @media (min-width: 780px) {
 
-    #cardTi1,
+    .__card-corpo div:nth-child(odd) {
+        background-color: red;
+        display: none;
+    }
+
+    /* #cardTi1,
     #cardTi2,
     #cardTi3,
     #cardTi4,
     #cardTi5,
     #cardTi6 {
         display: none;
-    }
+    } */
 }
 
 @media (max-width: 780px) {
@@ -170,14 +226,43 @@
         display: none;
     }
 
-    #cardTi1,
+    .__card-corpo div:nth-child(1),
+    .__card-corpo div:nth-child(3),
+    .__card-corpo div:nth-child(7),
+    .__card-corpo div:nth-child(9) {
+        color: #7B7B7B;
+    }
+
+    /* #cardTi1,
     #cardTi2,
     #cardTi4,
     #cardTi5 {
         color: #7B7B7B;
+    } */
+
+
+    .__card-corpo div:nth-child(1) {
+        grid-area: nsoT;
     }
 
+    .__card-corpo div:nth-child(3) {
+        grid-area: dsoT;
+    }
 
+    .__card-corpo div:nth-child(5),
+    .__card-corpo div:nth-child(11) {
+        display: none;
+    }
+
+    .__card-corpo div:nth-child(7) {
+        grid-area: orgT;
+    }
+
+    .__card-corpo div:nth-child(9) {
+        grid-area: utaT;
+    }
+
+/* 
     #cardTi1 {
         grid-area: nsoT;
     }
@@ -199,6 +284,6 @@
     #cardTi5 {
         grid-area: utaT;
 
-    }
+    } */
 
 }

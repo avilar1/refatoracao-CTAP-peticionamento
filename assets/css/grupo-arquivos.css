@@ -63,10 +63,14 @@
     width: 19px;
     height: 19px;
     color: #000;
-     background: url(../img/x.png);
+    background: url(/sigaex/assets/img/x.png);
      background-repeat: no-repeat;
      border: 0;
     border-radius: 0.25rem;
+}
+
+.__close-inline-mobile {
+    display: none;
 }
 
 .__grupo-arquivo .__close-inline {
@@ -116,6 +120,18 @@ border-color: #cccccc  ;
 
 /*-------------------------inicio estilização do botão de inserir arquivos*/
 
+.__path-icon {
+    fill: #09B88A;
+}
+
+.__button-file:hover .__path-icon{
+    fill: #f5f5f5;
+}
+
+.__grupo-arquivo input[type="file"] {
+    display: none;
+}
+
 .__btn-parent .__button-file {
     border-color: var(--verde-agua);
 }
@@ -141,9 +157,14 @@ border-color: #cccccc  ;
     border-color: #09B88A  ;
 }
 
+.__button-file:hover .__el-button {
+    color: #f5f5f5;
+}
+
 .__button-file{
     font-size: 0.8rem  ;  
     border-color: var(--verde-agua) ;
+
 }
 
 .__icon-file:hover+.__el-button {
@@ -189,6 +210,8 @@ border-color: #cccccc  ;
 .__el-button {
     text-align: end ;
 }
+
+
 
 
 /*-------------------------fim estilização do botão de inserir arquivos*/
@@ -272,6 +295,8 @@ border-color: #cccccc  ;
     .__close-inline {
         display: none;
     }
+
+
 
     .__el-button {
         text-align: start ;

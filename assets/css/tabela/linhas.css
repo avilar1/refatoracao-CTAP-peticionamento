@@ -9,11 +9,55 @@ tbody .accordion-flush .accordion-item .accordion-button,
 
 @media (max-width: 780px) {
 
-    #cardI0 {
+    /* #cardI0 {
+        grid-area: dso;
+    } */
+
+    .__card-corpo div:nth-child(2) {
+        grid-area: nso;
+    }
+
+    .__card-corpo div:nth-child(2) a {
+        line-height: 20px;
+        height: 20px;
+        color: #4579FB;
+    }
+
+    .__card-corpo div:nth-child(4) {
         grid-area: dso;
     }
 
-    #cardI1 {
+    .__card-corpo div:nth-child(6) {
+        
+        display: none;
+    }
+
+    .__card-corpo div:nth-child(8) {
+        grid-area: org;
+    }
+
+    .__card-corpo div:nth-child(10) {
+        grid-area: uta;
+    }
+
+    .__card-corpo div:nth-child(12) {
+        grid-area: sit;
+        padding: 15px 4px 10px;
+    }
+
+    .__card-corpo div:nth-child(2),
+    .__card-corpo div:nth-child(4),
+    .__card-corpo div:nth-child(8),
+    .__card-corpo div:nth-child(10) {
+        padding-left: 4px;
+    }
+
+    .__card-corpo div:nth-child(4),
+    .__card-corpo div:nth-child(10) {
+        justify-self: start;
+    }
+
+    /* #cardI1 {
         grid-area: nso;
     }
     #cardI1 a {
@@ -53,7 +97,7 @@ tbody .accordion-flush .accordion-item .accordion-button,
     #cardI2,
     #cardI5 {
         justify-self: start;
-    }
+    } */
 
     .__card-corpo {
         width: auto;

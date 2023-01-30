@@ -34,7 +34,7 @@ body main {
 
     box-shadow: none;
     border: solid 1px #ccc;
-    
+
     background-color: var(--branco);
     margin-top: 20px;
     font-weight: 500;
@@ -42,7 +42,8 @@ body main {
     padding-bottom: 30px;
 }
 
-#retornar {
+/* #retornar, */
+header h1 a i {
     content: "";
     background-image: url(../img/barb_arrow2.webp);
     background-repeat: no-repeat;
@@ -58,7 +59,7 @@ header h1 a {
 }
 
 body a {
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 .__colunaum {
@@ -83,8 +84,8 @@ body a {
     display: none;
 }
 
-.__row-up{
-        content: "";
+.__row-up {
+    content: "";
     background-image: url(../img/Vector.webp);
     background-repeat: no-repeat;
     background-position-y: 3px;
@@ -117,55 +118,55 @@ body a {
 
 
 
-.collapse + .__mostrar-mais {
+.collapse+.__mostrar-mais {
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     position: absolute;
-    
+
     width: 100%;
     height: 40px;
     top: 40px;
 }
 
-.collapse.show + .__mostrar-mais {
+.collapse.show+.__mostrar-mais {
     position: static;
     background: none;
     height: auto
 }
 
-.collapse + .__mostrar-mais #btnMostrarMais,
-.collapsing + .__mostrar-mais #btnMostrarMais {
+.collapse+.__mostrar-mais a,
+.collapsing+.__mostrar-mais a {
     position: absolute;
     bottom: -38px;
-    padding-top:5px ;
+    padding-top: 5px;
 }
 
-.collapse.show + .__mostrar-mais #btnMostrarMais {
+.collapse.show+.__mostrar-mais a {
     position: relative;
     bottom: 0;
 }
 
-.collapse #descricaocard,
-.collapsing #descricaocard{
+.collapse .card.card-body,
+.collapsing .card.card-body {
     max-height: 80px;
+    
 }
 
-
-
-.collapse.show #descricaocard {
+.collapse.show .card.card-body {
     max-height: initial;
 }
 
-#btnMostrarMais {
+.__mostrar-mais a,
+.__mostrar-mais a:focus,
+.__mostrar-mais a:hover{
     border: none;
     background: none;
     color: #4579fb;
     /* margin-left: 200px; */
     box-shadow: none;
-    
     width: 100%;
 }
 
-.collapse.show + .__mostrar-mais a {
+.collapse.show+.__mostrar-mais a {
     padding-bottom: 0px;
 }
 
@@ -199,7 +200,7 @@ body a {
 .__leftColumnForm {
     position: relative;
     width: 204px;
-    
+
 }
 
 .__rightColumnForm {
@@ -223,10 +224,10 @@ body a {
     -webkit-background-clip: text;
 }
 
-#collapseExample {
+
+.__mostra-mais-pai > div {
     max-width: 599px;
 }
-
 
 
 .__requestDetails {
@@ -236,18 +237,29 @@ body a {
 
 }
 
-#mais {
+/* #mais {
     display: none;
+} */
+
+.__statusDiscription .__statusRow + a {
+    color: #4579fb;
 }
 
-#encaminhamento {
+/* #encaminhamento {
     color: #4579fb
-}
+} */
 
-#botãoDescrição {
+.__formRow > .__rightColumnForm > .__statusDiscription:last-child {
+
     padding-top: 20px;
     padding-bottom: 0px;
 }
+
+/* #botãoDescrição {
+    padding-top: 20px;
+    padding-bottom: 0px;  
+    
+} */
 
 .__statusRow {
     position: relative;
@@ -294,20 +306,20 @@ body a {
     line-height: 25px
 }
 
-.__card-sit {
+/* .__card-sit {
     background-color: var(--branco) !important;
     text-align: start;
-    /* padding-left: 53%; */
+     padding-left: 53%;
     padding: 15px 0px 15px 53%;
     border-radius: 13px !important;
-}
+} */
 
-#etapaPassada {
+/* #etapaPassada {
     margin-left: 7px;
     color: #ffffff;
     border: 2px solid #02b0d6;
     border-radius: 50%;
-}
+} */
 
 .btn-success {
     background-color: #09b88a !important;
@@ -436,6 +448,7 @@ body a {
     margin-left: 2px;
     z-index: 100;
 }
+
 .__botao-sit {
     border-radius: 13px;
     font-size: 15px;
@@ -505,7 +518,7 @@ body a {
         width: 100%;
         margin-top: 0;
         padding-top: 16px;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
         border-top: 0;
         min-width: 320px;
     }
@@ -519,7 +532,7 @@ body a {
     }
 
 
-    .__formRow-mostra{
+    .__formRow-mostra {
         padding-bottom: 10px;
     }
 
@@ -528,7 +541,7 @@ body a {
     }
 
     .__leftColumnForm {
-        color:#7B7B7B;
+        color: #7B7B7B;
         padding: 10px 0 5px;
     }
 
@@ -541,11 +554,13 @@ body a {
         margin-right: 15px;
     }
 
-    #btnMostrarMais {
+    .__mostrar-mais a {
         font-size: 15px;
         font-weight: 500;
         bottom: -25px;
     }
+
+
 
     /* #esconde {
         display: none;
@@ -555,7 +570,7 @@ body a {
         margin-left: -4px;
     }
 
-    .__timeline{
+    .__timeline {
         background-color: #F5F5F5;
         padding: 5px;
     }

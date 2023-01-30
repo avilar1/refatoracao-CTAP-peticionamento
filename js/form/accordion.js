@@ -1,16 +1,22 @@
-let click = false
-const accordion = document.querySelector("[data-accordion]")
-const checkbox = document.querySelector("#check-terceiros")
+//let click = false
+const accordion = document.querySelector("[data-accordion]");
+const checkbox = document.querySelector("[data-accordion]").childNodes[1].childNodes[1];
+const nomeCompletodoInteressado = document.querySelector('.accordion-body').childNodes[1].childNodes[3];
+const cpfdoInteressado = document.querySelector('.accordion-body').childNodes[3].childNodes[3];
+
+accordion.disabled = true;
 
 
-accordion.addEventListener('click', (e) => {
-    checkbutton() 
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    accordion.disabled = false;
 
-})
+    nomeCompletodoInteressado.required = true;
+    cpfdoInteressado.required = true;
 
-function checkbutton() {
-    
-      click = !click
-      click?(checkbox.checked = click):checkbox.checked = click
-      console.log(click)
+  } else {
+    accordion.disabled = true;
+    nomeCompletodoInteressado.required = false;
+    cpfdoInteressado.required = false;
   }
+})
