@@ -54,7 +54,7 @@ function exibirInfo(informacoes) {
       month: 'numeric',
       year: 'numeric'
     };
-    // let clone = document.querySelectorAll("[data-desk=row]");
+
     output += `
         <tr class="__card-corpo-desk" id="" data-desk="row">
         <td id="cardI1-desk" data-desk="nso"><a href="#" data-desk="nsoD">${informacao.nso}</a></td>
