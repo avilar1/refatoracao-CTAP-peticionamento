@@ -160,6 +160,11 @@ td .accordion-button {
     box-shadow: none;
 }
 
+[data-linha] {
+    display: none;
+}
+
+
 
 
 @media (max-width: 992px) {
@@ -171,6 +176,17 @@ td .accordion-button {
 
 
 @media (max-width: 780px) {
+
+
+    [data-linha] {
+        display: table-row;
+    }
+
+
+    .__container table tbody tr td {
+    padding: 0;
+
+    }
 
     html body,
     table tbody div {

@@ -18,6 +18,11 @@ window.endPoint = end;
 
 const corpo = document.querySelector('#container');
 const tbody = document.querySelector('[data-tbody]');
+
+// let cloneDesk = document.querySelector('[data-padrao="desk"]').cloneNode(true);
+// let cloneMobile = document.querySelector('[data-padrao="mob"]').cloneNode(true);
+
+
 let ncont = 0;
 
 exibirInfo(end); 
@@ -54,7 +59,7 @@ function exibirInfo(informacoes) {
       month: 'numeric',
       year: 'numeric'
     };
-    // let clone = document.querySelectorAll("[data-desk=row]");
+
     output += `
         <tr class="__card-corpo-desk" id="" data-desk="row">
         <td id="cardI1-desk" data-desk="nso"><a href="#" data-desk="nsoD">${informacao.nso}</a></td>
@@ -79,23 +84,27 @@ function exibirInfo(informacoes) {
                         
                         <div class="accordion-collapse collapse" aria-labelledby="" data-bs-parent="#accordionFlushExample" data-acc="acone">
                           <div class="accordion-body" id="accordionbody" data-acc="abody">
-                            <div class="__card-corpo" id="cardbody" data-acc="acardb" >
-                              
-                              <div id="cardTi1" data-acc="acardtnso">Número da solicitação </div>             <div id="cardI1" ><a href="#" data-acc="acardinso">${informacao.nso}</a></div>
-                              <div id="cardTi2" data-acc="acardtdso">Data da solicitação</div>               <div id="cardI2" data-acc="acardidso">${informacao.dso.toLocaleString()}</div>
-                              <div id="cardTi3" data-acc="acardtsrv">Serviço</div>                           <div id="cardI3" data-acc="acardisrv">${informacao.srv}</div>
-                              <div id="cardTi4" data-acc="acardtorg">Órgão</div>                             <div id="cardI4" data-acc="acardiorg">${informacao.org}</div>
-                              <div id="cardTi5" data-acc="acardtuta">Última atualização</div>                <div id="cardI5" data-acc="acardiuta">${informacao.uta}</div>
-                              <div id="cardTi6" data-acc="acardtsit">Situação</div>                          <div id="cardI6"><a href="#" ${situacaoMobileUm(informacao)} data-acc="acardisit" >${informacao.sit}</a></div>
+
+                            <dl class="__card-corpo" id="cardbody" data-acc="acardb" >
+                              <dd id="cardI6"><a href="#" ${situacaoMobileUm(informacao)} data-acc="acardisit" >${informacao.sit}</a></dd>
+                              <dt id="cardTi1" data-acc="acardtnso">Número da solicitação </dt>             <dd id="cardI1" ><a href="#" data-acc="acardinso">${informacao.nso}</a></dd>
+                              <dt id="cardTi2" data-acc="acardtdso">Data da solicitação</dt>               <dd id="cardI2" data-acc="acardidso">${informacao.dso.toLocaleString()}</dd>
+                              <dt id="cardTi3" data-acc="acardtsrv">Serviço</dt>                           <dd id="cardI3" data-acc="acardisrv">${informacao.srv}</dd>
+                              <dt id="cardTi4" data-acc="acardtorg">Órgão</dt>                             <dd id="cardI4" data-acc="acardiorg">${informacao.org}</dd>
+                              <dt id="cardTi5" data-acc="acardtuta">Última atualização</dt>                <dd id="cardI5" data-acc="acardiuta">${informacao.uta}</dd>
+                              <dt id="cardTi6" data-acc="acardtsit">Situação</dt>                          
                               <a href="#">Veja mais detalhes</a>
-                            </div>
+                            </dl>
+
                           </div>
                         </div>
-                        <div id="" data-acc="asit" class="__extra-situacao" data-toggle="collapse" data-qualacc="" data-extra style="display:block;"><a data-acc="acardisit" ${situacaoMobileDois(informacao)}>${informacao.sit}</a>  </div>
+                        <div id="" data-acc="asit" class="__extra-situacao" data-toggle="collapse" data-qualacc="" data-extra><a data-acc="acardisit" ${situacaoMobileDois(informacao)}>${informacao.sit}</a>  </div>
                       </div>
                     </td>    
                   </tr>
           `;
+
+          
   });
 
   tbody.innerHTML = output;
@@ -182,43 +191,43 @@ const linhas = document.querySelectorAll('[data-linha]');
 let controle = 0;
 let cont = 0;
 
-function myFunction(x) {
-  if (x.matches) { // If media query matches
+// function myFunction(x) {
+//   if (x.matches) { // If media query matches
 
-    if (controle == 0) {
-      console.log("desktop")
-      let n = 0
-      linhas.forEach((elemento) => {
-        elemento.hidden = true;
-        // aconePOP[n].classList.add("show")
-        n++
+//     if (controle == 0) {
+//       console.log("desktop")
+//       let n = 0
+//       linhas.forEach((elemento) => {
+//         elemento.hidden = true;
+//         // aconePOP[n].classList.add("show")
+//         n++
 
-      })
-      controle = 1;
-    }
+//       })
+//       controle = 1;
+//     }
 
-  } else {
-    if (controle == 1) {
-      console.log("celular")
-      let n = 0
-      linhas.forEach((element) => {
-        element.hidden = false;
-        // aconePOP[n].classList.remove("show")
-        n++
+//   } else {
+//     if (controle == 1) {
+//       console.log("celular")
+//       let n = 0
+//       linhas.forEach((element) => {
+//         element.hidden = false;
+//         // aconePOP[n].classList.remove("show")
+//         n++
 
-        document.querySelector("#mostrar").open = false;
+//         document.querySelector("#mostrar").open = false;
         
 
-      })
-      controle = 0;
-    }
-  }
+//       })
+//       controle = 0;
+//     }
+//   }
 
-}
+// }
 
-var x = window.matchMedia("(min-width: 780px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+// var x = window.matchMedia("(min-width: 780px)")
+// myFunction(x) // Call listener function at run time
+// x.addListener(myFunction) // Attach listener function on state changes
 
 }
 

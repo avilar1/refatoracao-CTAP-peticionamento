@@ -216,24 +216,33 @@ tbody tr {
         color: #7B7B7B;
     }
     
-
-
-
     .__card-corpo {
+        width: auto;
+        padding: 0px;
+        font-size: 15px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .__card-corpo dt {
+        color: var(--cinza-letra);
+        font-weight: 500;
+    }
+
+    .accordion-collapse.collapse.show~.__extra-situacao,
+    .accordion-collapse.collapsing~.__extra-situacao{
+        display:none;
+    }
+
+    
+
+    /* .__card-corpo {
         width: auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 20px 30px 20px 30px 20px 30px 20px 35px;
-        grid-template-areas:
-            "sit"
-            "nsoT" /*20px*/
-            "nso" /*30px*/
-            "dsoT" /*20px*/
-            "dso" /*30px*/
-            "orgT" /*20px*/
-            "org" /*30px*/
-            "utaT" /*20px*/
-            "uta"; /*35px*/
+
         align-items: start;
         border: none;
         font-size: 13px;
@@ -241,7 +250,20 @@ tbody tr {
         justify-items: start;
         padding: 0px;
         row-gap: 5px;
-    }
+    } */
+
+    /* 
+    grid-template-areas:
+    "sit"
+    "nsoT" 20px
+    "nso" 30px
+    "dsoT" 20px
+    "dso" 30px
+    "orgT" 20px
+    "org" 30px
+    "utaT" 20px
+    "uta"; 35px */
+    
 
     tbody .accordion-flush .accordion-item .accordion-button {
         display: flex;

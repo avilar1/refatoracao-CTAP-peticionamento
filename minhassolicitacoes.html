@@ -171,9 +171,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </tr>
           </thead>
     <tbody id="modelo" data-tbody>
-      <!--As informações entram aqui ao consumir API do backend, muito mais racional.-->
+      <!--As informações entram aqui ao consumir API do backend, usando TEMPLATE STRING. Abaixo, há meramente um exemplo que será zerado
+      para editar esse html, inserindo id, por exemplo, recomenda mudar o template string.
+    Se preferrir inserir os cards de outra forma, abaixo o modelo.-->
 
-      <tr class="__card-corpo-desk" id="" data-desk="row" data-padrao >
+      <tr class="__card-corpo-desk" id="" data-desk="row" data-padrao="desk" >
         <td id="cardI1-desk" data-desk="nso"><a href="#" data-desk="nsoD"></a></td>
         <td id="cardI2-desk" data-desk="dso"></td>
         <td id="cardI3-desk" data-desk="srv"></td>
@@ -183,35 +185,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        
       </tr>
 
-        <tr class="" data-linha data-padrao>
-                    <td class="accordion accordion-flush" id="" data-acc="aflush">
+        <tr class="" data-linha data-padrao="mob">
+            <td class="accordion accordion-flush" id="" data-acc="aflush">
                       
                      <div class="accordion-item" id="accordionitem" data-acc="aitem">
                         <h2 class="accordion-header" id="" data-acc="ahone">
                           <button class="accordion-button collapsed" id="accordionbutton" type="button" data-bs-toggle="collapse" data-bs-target="" aria-expanded="false" aria-controls="" data-acc="abutton" data-id="" data-qualacc="">
-                            
-                            
+                             
                           </button>      
                         </h2>
                         
                         <div class="accordion-collapse collapse" aria-labelledby="" data-bs-parent="#accordionFlushExample" data-acc="acone">
                           <div class="accordion-body" id="accordionbody" data-acc="abody">
-                            <div class="__card-corpo" id="cardbody" data-acc="acardb" >
-                              
-                              <div id="cardTi1" data-acc="acardtnso">Número da solicitação </div>             <div id="cardI1" ><a href="#" data-acc="acardinso"></a></div>
-                              <div id="cardTi2" data-acc="acardtdso">Data da solicitação</div>               <div id="cardI2" data-acc="acardidso"></div>
-                              <div id="cardTi3" data-acc="acardtsrv">Serviço</div>                           <div id="cardI3" data-acc="acardisrv"></div>
-                              <div id="cardTi4" data-acc="acardtorg">Órgão</div>                             <div id="cardI4" data-acc="acardiorg"></div>
-                              <div id="cardTi5" data-acc="acardtuta">Última atualização</div>                <div id="cardI5" data-acc="acardiuta"></div>
-                              <div id="cardTi6" data-acc="acardtsit">Situação</div>                          <div id="cardI6"><a href="#" data-acc="acardisit" ></a></div>
+                            <dl class="__card-corpo" id="cardbody" data-acc="acardb" >
+                              <dt id="cardTi1" data-acc="acardtnso">Número da solicitação </dt>             <dd id="cardI1" ><a href="#" data-acc="acardinso"></a></dd>
+                              <dt id="cardTi2" data-acc="acardtdso">Data da solicitação</dt>               <dd id="cardI2" data-acc="acardidso"></dd>
+                              <dt id="cardTi3" data-acc="acardtsrv">Serviço</dt>                           <dd id="cardI3" data-acc="acardisrv"></dd>
+                              <dt id="cardTi4" data-acc="acardtorg">Órgão</dt>                             <dd id="cardI4" data-acc="acardiorg"></dd>
+                              <dt id="cardTi5" data-acc="acardtuta">Última atualização</dt>                <dd id="cardI5" data-acc="acardiuta"></dd>
+                              <dt id="cardTi6" data-acc="acardtsit">Situação</dt>                          <dd id="cardI6"><a href="#" data-acc="acardisit" ></a></dd>
                               <a href="#">Veja mais detalhes</a>
-                            </div>
+                            </dl>
                           </div>
                         </div>
                         <div id="" data-acc="asit" class="__extra-situacao" data-toggle="collapse" data-qualacc="" data-extra style="display:block;"><a data-acc="acardisit"></a></div>
                       </div>
-                    </td>    
-                  </tr>
+              </td>    
+          </tr>
     </tbody>
 </table>
         
@@ -234,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/ms/populador.js" type="module"></script>
     <script src="js/ms/tabela.js" type="module"></script>
     <script src="js/ms/dropdown.js" type="module"></script>
-    <script src="js/ms/acc.js" type="module"></script>
+    <!-- <script src="js/ms/acc.js" type="module"></script> -->
     <script src="js/ms/filtrarDados.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
